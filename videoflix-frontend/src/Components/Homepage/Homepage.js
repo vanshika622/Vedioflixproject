@@ -19,6 +19,7 @@ import TopMovieBox from "./TopMovieBox"
 import Section from "./Section"
 import Footer from "./Footer"
  import { useEffect, useRef, useState } from "react"
+
 // more better way
 function HomePage(){
     let [Allmovies,setMovies]= useState([]);
@@ -57,7 +58,7 @@ function HomePage(){
          
          
 
-        //     setMovies(data);
+        //     
              trending.current=data.sort((a,b)=>{
                  return b.watchers-a.watchers
              }).slice(0,5);
@@ -73,6 +74,7 @@ function HomePage(){
     return(
         <div className="main_container">
             <Header />
+            
         <TopMovieBox imgsrc={top.current} /> 
         <Section name="trending" movies={trending.current}/>
         <Section name ="Comedy" movies={comedy.current} />

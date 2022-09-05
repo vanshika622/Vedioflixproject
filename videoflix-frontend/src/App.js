@@ -9,6 +9,7 @@ import Register from './Components/LoginandRegister/Register';
 import Login from './Components/LoginandRegister/Login';
 import HomePage from './Components/Homepage/Homepage';
 import Protect from './Components/Protect';
+import Player from './Components/Playerpage/Player'
 function App() {
   return (
     <div className="App">
@@ -24,8 +25,16 @@ function App() {
             <HomePage />
           </Protect>
         } />
-        </Routes>
+        <Route path='/player/:id' element={
+         
+          <Protect>
+            <Player />
+          </Protect>
+        } />
+       
 
+        </Routes>
+        
       </BrowserRouter>
     </div>
   );
