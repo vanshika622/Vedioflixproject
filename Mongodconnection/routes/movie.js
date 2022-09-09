@@ -28,7 +28,9 @@ router.get("/",veriftToken,(req,res)=>{
 })
 
 router.get("/:id",veriftToken,(req,res)=>{
-    movieModel.findOne({_id:id})
+    const id= req.params.id
+    
+    movieModel.findOne({_id:id},)
     .then((movie)=>{
         res.send(movie)
     })
